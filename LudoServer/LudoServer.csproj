@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CB69206-7CA7-45D1-B4F3-F8E29A93C581}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LudoServer</RootNamespace>
+    <AssemblyName>LudoServer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameServer\GServer.cs" />
+    <Compile Include="GameServer\LudoProtocol\LudoPackage.cs" />
+    <Compile Include="GameServer\LudoProtocol\LudoProtocol.cs" />
+    <Compile Include="GameServer\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramHelperFunctions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TcpServer\ClientHandler\ClientHandler.cs" />
+    <Compile Include="TcpServer\ClientHandler\IClientHandler.cs" />
+    <Compile Include="TcpServer\ClientListener\ClientListener.cs" />
+    <Compile Include="TcpServer\ClientListener\IClientListener.cs" />
+    <Compile Include="TcpServer\ClientReclaimer\ClientReclaimer.cs" />
+    <Compile Include="TcpServer\ClientReclaimer\IClientReclaimer.cs" />
+    <Compile Include="TcpServer\IServer.cs" />
+    <Compile Include="TcpServer\Server.cs" />
+    <Compile Include="TcpServer\Structures\ClientData.cs" />
+    <Compile Include="TcpServer\Structures\ConnectionData.cs" />
+    <Compile Include="TcpServer\Structures\ConnectionEvent.cs" />
+    <Compile Include="TcpServer\Structures\DisconnectionEvent.cs" />
+    <Compile Include="TcpServer\Structures\HandlerMessageData.cs" />
+    <Compile Include="TcpServer\Structures\HandlerMessageEvent.cs" />
+    <Compile Include="TcpServer\Structures\ListenerStateEvent.cs" />
+    <Compile Include="TcpServer\Structures\ReclaimerStateEvent.cs" />
+    <Compile Include="TcpServer\Structures\ReclaimEvent.cs" />
+    <Compile Include="TcpServer\Structures\ServerMessageData.cs" />
+    <Compile Include="TcpServer\Structures\ServerMessageEvent.cs" />
+    <Compile Include="TcpServer\TcpProtocol\Package.cs" />
+    <Compile Include="TcpServer\TcpProtocol\Protocol.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GameServer\Resources\Boards\A.txt" />
+    <EmbeddedResource Include="GameServer\Resources\Boards\B.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,7 @@
+C:\Users\Marce\Desktop\Proyectos\T11_Ludo\LudoServer\LudoServer\LudoServer\bin\Debug\LudoServer.exe.config
+C:\Users\Marce\Desktop\Proyectos\T11_Ludo\LudoServer\LudoServer\LudoServer\bin\Debug\LudoServer.exe
+C:\Users\Marce\Desktop\Proyectos\T11_Ludo\LudoServer\LudoServer\LudoServer\bin\Debug\LudoServer.pdb
+C:\Users\Marce\Desktop\Proyectos\T11_Ludo\LudoServer\LudoServer\LudoServer\obj\Debug\LudoServer.csproj.AssemblyReference.cache
+C:\Users\Marce\Desktop\Proyectos\T11_Ludo\LudoServer\LudoServer\LudoServer\obj\Debug\LudoServer.csproj.CoreCompileInputs.cache
+C:\Users\Marce\Desktop\Proyectos\T11_Ludo\LudoServer\LudoServer\LudoServer\obj\Debug\LudoServer.exe
+C:\Users\Marce\Desktop\Proyectos\T11_Ludo\LudoServer\LudoServer\LudoServer\obj\Debug\LudoServer.pdb
